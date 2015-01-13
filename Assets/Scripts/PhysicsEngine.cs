@@ -2,20 +2,14 @@
 using System.Collections;
 
 public class PhysicsEngine : MonoBehaviour {
-
-	public Vector3 v;  // Average velocity of this FixedUpdate() loop
+	public Vector3 velocityVector;  // average velocity this FixedUpdate()
 
 	// Use this for initialization
 	void Start () {
 	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	
 	void FixedUpdate () {
-		transform.position += v * Time.deltaTime;
+		transform.position += velocityVector * Time.deltaTime;
 	}
 }
