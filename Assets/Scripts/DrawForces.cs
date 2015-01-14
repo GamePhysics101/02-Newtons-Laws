@@ -35,7 +35,7 @@ public class DrawForces : MonoBehaviour {
 			int i = 0;
 			foreach (Vector3 forceVector in forceVectorList) {
 				lineRenderer.SetPosition(i, Vector3.zero);
-				lineRenderer.SetPosition(i+1, forceVector);
+				lineRenderer.SetPosition(i+1, -forceVector);
 				i = i + 2;
 			}
 		} else {
