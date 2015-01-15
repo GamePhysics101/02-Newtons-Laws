@@ -2,9 +2,12 @@
 using System.Collections;
 
 [RequireComponent (typeof(PhysicsEngine))]
-public class AddForce : MonoBehaviour {
+public class RocketEngine : MonoBehaviour {
 	
-	public Vector3 forceVector;
+	public float fuelMass;				// [kg]
+	public float maxThrust;				// kN [kg m s^-2]	
+	public float thrustPercent;			// [none]
+	public Vector3 thrustUnitVector;	// [none]
 	
 	private PhysicsEngine physicsEngine;
 
@@ -14,6 +17,6 @@ public class AddForce : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		physicsEngine.AddForce (forceVector);
+		physicsEngine.AddForce (thrustUnitVector);
 	}
 }
