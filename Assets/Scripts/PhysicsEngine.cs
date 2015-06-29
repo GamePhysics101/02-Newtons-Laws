@@ -3,16 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PhysicsEngine : MonoBehaviour {
-	public float mass;				// [kg]
-	public Vector3 velocityVector;  // [m s^-1]
-	public Vector3 netForceVector;  // N [kg m s^-2]
+	public float mass;				// kg
+	public Vector3 velocityVector;  // m s^-1
+	public Vector3 netForceVector;  // kg m s^-2
 	
 	private List<Vector3> forceVectorList = new List<Vector3>();
+	private Vector3 momentum;		// kg m s^-1
 	
 	// Use this for initialization
 	void Start () {
 		SetupThrustTrails();
-		
+		momentum = mass * velocityVector;
 	}
 	
 	void FixedUpdate () {
@@ -32,11 +33,10 @@ public class PhysicsEngine : MonoBehaviour {
 			netForceVector = netForceVector + forceVector;
 		}
 		forceVectorList = new List<Vector3>();
-		
-		// Calculate position change due to net force
-		Vector3 accelerationVector = netForceVector / mass;
-		velocityVector += accelerationVector * Time.deltaTime;
-		transform.position += velocityVector * Time.deltaTime;
+
+		momentum += netForceVector * Time.deltaTime;
+		velocityVector = (1 / mass) * momentum;
+		transform.Translate (velocityVector * Time.deltaTime);
 	}
 	
 	
