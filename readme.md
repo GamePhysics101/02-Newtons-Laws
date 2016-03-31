@@ -7,7 +7,7 @@ In this section our students learn...
 + How to improve Unity 3D's drag model.
 + How to impliment universal gravitation and orbits.
 
-Watch me write this code as part of my popular Udemy course. This link will give you a decent GitHub discount: https://www.udemy.com/gamephysics/?couponCode=GitHubSpecial
+Watch me write this code as part of my popular Udemy course. This link will give you a decent GitHub discount: https://www.udemy.com/gamephysics/?couponCode=GitHubDiscount
 
 Enjoy
 
