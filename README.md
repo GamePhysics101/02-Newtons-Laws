@@ -128,4 +128,5 @@ game object.
 + How to distill information from Wikipedia etc. 
 + How to create components for various forces.
 
- Find out more about our [Game Physics Course](https://www.udemy.com/gamephysics/?couponCode=GitHubDiscount).
+---
+Find out more about our [Game Physics Course](https://www.udemy.com/gamephysics/?couponCode=GitHubDiscount).
